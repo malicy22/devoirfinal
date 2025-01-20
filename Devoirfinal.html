@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Libraire.Dostoïevski</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<style>
+:root{
+    --Playfair: 'Playfair Display', serif;
+    --Quicksand: 'Quicksand', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --dark: #3c393d;
+    --exDark: #2b2b2b;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--Quicksand);
+}
+body{
+    line-height: 1.4;
+    color: var(--dark);
+}
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+/* header */
+header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('C:/Users/walid/Desktop/mouna.webp') center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+.navbar{
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1.2rem;
+}
+.navbar-brand{
+    color: #fff;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--Playfair);
+    letter-spacing: 1px;
+}
+.navbar-nav{
+    padding: 0.8rem 0 0.2rem 0;
+    text-align: center;
+}
+.navbar-nav a{
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.4rem 0.1rem;
+    letter-spacing: 3px;
+    transition: opacity 0.5s ease;
+}
+.navbar-nav a:hover{
+    opacity: 0.7;
+}
+.banner{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+.banner-title{
+    font-size: 3rem;
+    font-family: var(--Playfair);
+    line-height: 1.2;
+}
+.banner-title span{
+    font-family: var(--Playfair);
+    color: var(--exDark);
+}
+.banner p{
+    padding: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-family: var(--Roboto);
+    font-weight: 300;
+    word-spacing: 2px;
+}
+.banner form{
+    background: #fff;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.search-input{
+    font-family: var(--Roboto);
+    font-size: 1.1rem;
+    width: 100%;
+    outline: 0;
+    padding: 0.6rem 0;
+    border: none;
+}
+.search-input::placeholder{
+    text-transform: capitalize;
+}
+.search-btn{
+    width: 40px;
+    font-size: 1.1rem;
+    color: var(--dark);
+    border: none;
+    background: transparent;
+    outline: 0;
+    cursor: pointer;
+}
+
+/* design */
+.design{
+    padding: 4.5rem 0;
+}
+.title{
+    text-align: center;
+    padding: 1rem 0;
+}
+.title h2{
+    font-family: var(--Playfair);
+    font-size: 2.4rem;
+}
+.title p{
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+.design-content{
+    margin: 2rem 0;
+}
+.design-item{
+    cursor: pointer;
+    margin: 1.5rem 0;
+}
+.design-img{
+    position: relative;
+    overflow: hidden;
+}
+.design-img::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+.design-img img{
+    transition:  all 0.5s ease;
+}
+.design-item:hover img{
+    transform: scale(1.2);
+}
+.design-img span:first-of-type{
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    background: var(--exDark);
+    color: #fff;
+    padding: 0.25rem 1rem;
+}
+.design-img span:last-of-type{
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.design-title{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.design-title a{
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+
+/* blog */
+.blog{
+    background: #f9f9f9;
+    padding: 4.5rem 0;
+}
+.blog-content{
+    margin: 2rem 0;
+}
+.blog-img{
+    position: relative;
+}
+.blog-img span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--exDark);
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.3rem 0.6rem;
+}
+.blog-text{
+    margin: 2.2rem 0;
+    padding: 0 1rem;
+}
+.blog-text span{
+    font-weight: 300;
+    display: block;
+    padding-bottom: 0.5rem;
+}
+.blog-text h2{
+    font-family: var(--Playfair);
+    padding: 1rem 0;
+    font-size: 1.65rem;
+    font-weight: 500;
+}
+.blog-text p{
+    font-weight: 300;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    padding-bottom: 1.2rem;
+}
+.blog-text a{
+    font-family: var(--Roboto);
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--dark);
+    display: inline-block;
+    background: var(--dark);
+    color: #fff;
+    padding: 0.55rem 1.2rem;
+    transition: all 0.5s ease;
+}
+.blog-text a:hover{
+    background: var(--exDark);
+}
+
+/* about */
+.about{
+    padding: 4.5rem 0;
+}
+.about-text{
+    margin: 2rem 0;
+}
+.about-text > p{
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+    opacity: 0.8;
+}
+
+/* footer */
+footer{
+    background: var(--exDark);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+.social-links a{
+    border: 2px solid #fff;
+    color: #fff;
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover{
+    background: #fff;
+    color: var(--exDark);
+}
+.footer span{
+    margin-top: 1rem;
+    display: block;
+    font-family: var(--Playfair);
+    letter-spacing: 2px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 540px){
+    .navbar-nav a{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+    .banner-title{
+        font-size: 5rem;
+    }
+    .banner form{
+        margin-top: 1.4rem;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .navbar .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .search-input{
+        padding: 0.8rem 0;
+    }
+    .design-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .design-item{
+        margin: 0;
+    }
+    .blog-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .blog-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .about-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .design-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+</style>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header>
+      <nav class = "navbar">
+        <div class = "container">
+          <a href = "index.html" class = "navbar-brand">Librairie.Dostoïevski</a>
+          <div class = "navbar-nav">
+            <a href = "">Home</a>
+            
+            <a href = "file:///C:/Users/walid/Documents/videofiodor.html">Vidéo</a>
+            <a href = "file:///C:/Users/walid/Documents/nouveau%2012.html">Livres</a>
+          </div>
+        </div>
+      </nav>
+      <div class = "banner">
+        <div class = "container">
+          <h1 class = "banner-title">
+            <span>Librairie.</span> F.M.Dostoïevski
+          </h1>
+          <p>toutes les oeuvres de F.M.Dostoïevski sont disponible</p>
+          <div style='border-radius:30px;margin-left:10%;margin-right:10%;display:flex; flex-direction: row; background-color:#FFFFFF;padding-left:5%;'>
+			
+            <input style='background-color:none;' id="moha" type = "text" class = "search-input" placeholder="Recherche...">
+            <button id="moha1" class = "search-btn">
+              <i class = "fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end of header -->
+    
+    <!-- design -->
+    <section class = "design" id = "design">
+      <div class = "container">
+        <div class = "title">
+          <h2>Les citations du noveliste Russe</h2>
+          <p>L'une des épitomés les plus réputés</p>
+        </div>
+
+        <div class = "design-content">
+          <!-- item -->
+          <div class = "design-item">
+            <div class = "design-img">
+              <img src = "C:/Users/walid/Desktop/OIP.jpg" alt = "photo de Fyodor">
+              <span>1</span>
+              <span>Librairie.Dostoïevski</span>
+            </div>
+            <div class = "design-title">
+              <a href = "C:/Users/walid/Desktop/OIP.jpg">"You will never be happy if you continue to search for what happiness consists of, you will never live if you are looking of the meaning of life"</a>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- item -->
+          <div class = "design-item">
+            <div class = "design-img">
+              <img src = "C:/Users/walid/Desktop/Adam.jpg" alt = "Photo de Fyodor">
+              <span>2</span>
+              <span>Librairie.Dostoïevski</span>
+            </div>
+            <div class = "design-title">
+              <a href = "#">"words are like keys, if you choose them right, they can open any heart, and shut any mouth"</a>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- item -->
+          <div class = "design-item">
+            <div class = "design-img">
+              <img src = "C:/Users/walid/Desktop/Adam1.jpg" alt = "Photo de Fyodor">
+              <span>3 </span>
+              <span>Librairie.Dostoïevski</span>
+            </div>
+            <div class = "design-title">
+              <a href = "#">"The best way to keep a prisonner from escaping is to make sure he never knows he's a prisonner"</a>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- item -->
+          <div class = "design-item">
+            <div class = "design-img">
+              <img src = "C:/Users/walid/Desktop/Adam3.jpg" alt = "Photo de Fyodor">
+              <span>4 </span>
+              <span>Librairie.Dostoïevski</span>
+            </div>
+            <div class = "design-title">
+              <a href = "#">"Beauty is mysterious as well as terrible. God and devil are fighting there, and the battlefield is the heart of man"</a>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- item -->
+          <div class = "design-item">
+            <div class = "design-img">
+              <img src = "C:/Users/walid/Desktop/adam2.jpg" alt = "Photo de Fyodor">
+              <span>5 </span>
+              <span>Librairie.Dostoïevski</span>
+            </div>
+            <div class = "design-title">
+              <a href = "#">"The greatest happiness is to know the source of unhappiness"</a>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- item -->
+          <div class = "design-item">
+            <div class = "design-img">
+              <img src = "C:/Users/walid/Desktop/Adam4.jpg" alt = "Photo de Fyodor">
+              <span> 6</span>
+              <span>Librairie.Dostoïevski</span>
+            </div>
+            <div class = "design-title">
+              <a href = "#">"A real gentleman, even if he loses everything he owns, must show no emotion. Money must be so far beneath a gentleman that it is hardly worth troubling about"</a>
+            </div>
+          </div>
+          <!-- end of item -->
+        </div>
+      </div>
+    </section>
+    <!-- end of design -->
+
+
+    <!-- blog -->
+    <section class = "blog" id = "blog">
+      <div class = "container">
+        <div class = "title">
+          <h2>Autres écrivains</h2>
+          <p>six écrivains occidentaux pour qui Fiodor Dostoïevski fut une source d’inspiration</p>
+        </div>
+        <div class = "blog-content">
+          <!-- item -->
+          <div class = "blog-item">
+            <div class = "blog-img">
+              <img src = "C:/Users/walid/Desktop/Virgina.jpg" alt = "">
+              
+            </div>
+            <div class = "blog-text">
+              <span>1912-1941</span>
+              <h2>Virginia Woolf</h2>
+              <p>Virginia Woolf a écrit à propos de ses œuvres qu’elles étaient « des tourbillons bouillonnants, des tempêtes de sable tournoyantes, des trombes d’eau nous aspirant en leur sein. Elles sont composées purement et entièrement avec le matière de l’âme. Contre notre gré nous sommes noyés dedans, tourbillonnant en rond, aveuglés, suffocant, et en même temps remplis d’une extase étourdie »..</p>
+              <a href = "https://en.wikipedia.org/wiki/Virginia_Woolf">Read More</a>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- item -->
+          <div class = "blog-item">
+            <div class = "blog-img">
+              <img src = "C:/Users/walid/Desktop/jesuis.jpg" alt = "">
+            
+            </div>
+            <div class = "blog-text">
+              <span>1927-2014</span>
+              <h2>Gabriel Garcia Márquez </h2>
+              <p>été fan de Dostoïevski dès sa jeunesse. Probablement le seul géant de la littérature à ne pas l’avoir reconnu est Vladimir Nabokov. Nous savons assurément que Charles Dickens avait exercé une forte influence sur Dostoïevski. À son tour, l’écrivain le plus sombre de Russie a impacté la vision du monde de nombreux de ses successeurs. En voici quelques-uns.</p>
+              <a href = "https://en.wikipedia.org/wiki/Gabriel_Garc%C3%ADa_M%C3%A1rquez">Read More</a>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- item -->
+          <div class = "blog-item">
+            <div class = "blog-img">
+              <img src = "C:/Users/walid/Desktop/hem.jpg" alt = "">
+        
+            </div>
+            <div class = "blog-text">
+              <span>né en 1988<span>
+              <h2>Ernest Hemingway<h2>
+              <p>L’attitude d’Hemingway envers Dostoïevski se reflète dans son récit autobiographique Paris est une fête. « Dans Dostoïevski, il y avait certaines choses croyables et auxquelles on ne pouvait croire, mais d'autres aussi qui étaient si vraies qu'elles vous transformaient au fur et à mesure que vous les lisiez ; elles vous enseignaient la fragilité et la folie, la méchanceté et la sainteté et les affres du jeu, comme Tourgueniev vous enseignait les paysages et les routes, et Tolstoï les mouvements de troupes, le terrain et les forces en présence, officiers et soldats, et le combat. » Après un tel éloge, l’auteur a toutefois nuancé : « J’ai réfléchi à Dostoïevski. Comment un homme peut-il écrire si mal, si incroyablement mal, et vous vous ressentir des choses si profondes ? » De nombreux experts russes suspectent Hemingway d’avoir été seulement un peu jaloux.</p>
+              <a href = "https://en.wikipedia.org/wiki/Ernest_Hemingway">Read More</a>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- item -->
+          <div class = "blog-item">
+            <div class = "blog-img">
+              <img src = "C:/Users/walid/Desktop/nadi.jpg" alt = "">
+        
+            </div>
+            <div class = "blog-text">
+              <span>1919–1962</span>
+              <h2>Faulkner</h2>
+              <p>Ce romancier américain a mentionné l’écrivain russe comme étant l’une de ses principales inspirations littéraires, aux côtés de la Bible et de Shakespeare. Les frères Karamazov est l’œuvre l’ayant le plus influencé, et il le relisait fréquemment. Il en est même venu à écrire au poète Hart Crane que la littérature américaine n’avait rien de similaire à ce roman. « Comme Dostoïevski, Faulkner était intéressé par l’étude de la crise d’une personnalité se retrouvant au cœur d’une crise de société », a avancé le docteur Robert Hamblin, spécialiste de l’œuvre de Faulkner. Une famille banale que Faulkner décrit symbolise les humeurs et conditions d’une nation entière (les États du Sud américain pour être plus précis), ce qui est la même chose que les personnages de Dostoïevski, qui sont à la croisée des chemins de la morale, de la foi et des émotions.</p>
+              <a href = "https://en.wikipedia.org/wiki/William_Faulkner">Read More</a>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- item -->
+          <div class = "blog-item">
+            <div class = "blog-img">
+              <img src = "C:/Users/walid/Desktop/ni.jpg" alt = "">
+         
+            </div>
+            <div class = "blog-text">
+              <span>1844-1900</span>
+              <h2>Friedrich Nietzsche</h2>
+              <p>Nietzsche portait un grand intérêt à la littérature russe et avait lu Pouchkine, Lermontov et Gogol. Il déclarait également que Dostoïevski était la découverte la plus heureuse de sa vie. « Connaissez-vous Dostoïevski ? À l’exception de Stendhal personne n’a été une aussi bonne surprise pour moi et personne ne m’a procuré autant de plaisir. C’est un psychologue avec qui je me trouvé des points communs ». Il existe une légende selon laquelle Nietzsche aurait lu le roman de Dostoïevski Humiliés et Offensés les larmes aux yeux. Ce que nous savons de manière sûre est que le philosophe allemand a exprimé le plus profond respect pour Dostoïevski après la lecture de ce livre.</p>
+              <a href = "https://en.wikipedia.org/wiki/Friedrich_Nietzsche">Read More</a>
+            </div>
+          </div>
+          <!-- end of item -->
+          <!-- item -->
+          <div class = "blog-item">
+            <div class = "blog-img">
+              <img src = "C:/Users/walid/Desktop/pa.jpg" alt = "">
+        
+            </div>
+            <div class = "blog-text">
+              <span>né en 1952</span>
+              <h2>Orhan Pamuk</h2>
+              <p>Pamuk admet que Tolstoï est un plus grand maître du roman, mais qu’il a personnellement été plus influencé par le politisé Dostoïevski. Alors qu’il animait une conférence à Saint-Pétersbourg, Pamuk a confié que qu’après avoir lu pour la première fois LesFrères Karamazov, il avait réalisé que sa vie avait complètement changé. Pamuk aurait même eu l’impression que l’écrivain russe s’était adressé à lui, lui révélant quelque chose à propos des gens et de la vie, que personne d’autre ne connait. À l’âge de 20 ans, Pamuk a lu l’un des meilleurs romans politiques, Les Démons, et a été à la fois étonné et effrayé. Rien de ce qu’il avait pu lire auparavant n’avait eu un tel impact sur lui. Il a été choqué de voir à quel point la passion que l’on peut avoir pour le pouvoir peut être forte, mais en même il a été émerveillé par la capacité dont on peut faire preuve pour pardonner ainsi que par notre besoin de foi. Cette soif simultanée pour le mal et le saint est ce qui a le plus interpelé Pamuk.</p>
+              <a href = "https://en.wikipedia.org/wiki/Orhan_Pamuk">Read More</a>
+            </div>
+          </div>
+          <!-- end of item -->
+        </div>
+      </div>
+    </section>
+    <!-- end of blog -->
+
+    <!-- about -->
+    <section class = "about" id = "about">
+      <div class = "container">
+        <div class = "about-content">
+          <div>
+            <img src = "C:/Users/walid/Desktop/fiodor.jpg" alt = "">
+          </div>
+          <div class = "about-text">
+            <div class = "title">
+              <h2>Fiodor Mikhaïlovitch Dostoïevski</h2>
+             
+            </div>
+            <p>Écrivain russe, Fédor Mikhailovitch Dostoïevski est né le 30 octobre 1821. Les circonstances de sa venue au monde constituent, à elles seules, un symbole. Il naît à Moscou, dans un petit logement de l'hôpital Marie, où son père exerce les fonctions de médecin. Dès les premiers pas de l'enfant, le destin lui assigne, de la sorte, une place de choix parmi les pauvres et les éclopés. Devant lui s'ouvre un univers sans joie, qui sent les médicaments, la misère et la soupe de caserne. Sa mère est une personne triste et inquiète, tourmentée par des présages. Son père, despote en chambre, hargneux, avare et brutal, impose son autorité à la maisonnée par des distributions d'injures et de claques. C'est sous sa surveillance que le petit Fedor doit entreprendre ses études. Il déteste et il plaint en secret cet homme dont les éclats de voix le poursuivent dans ses rêves. Il souhaite inconsciemment la mort du tyran. Mais Dieu ne l'a pas entendu. C'est sa mère, si douce, qui s'en va la première, épuisée par un mal incurable</p>
+            <p>Frappé de désespoir, le veuf sombre dans l'ivrognerie, prend son travail en dégoût et décide de placer son fils à l'École des ingénieurs, à Saint-Pétersbourg, pour n'avoir plus à s'occuper de lui. Dans cet établissement sévère, voué au culte des sciences exactes et de la discipline militaire à la mode prussienne, le garçon trouve le moyen pourtant de se passionner pour la littérature, de dévorer des livres russes et français en cachette, et de s'essayer lui-même au métier d'écrivain; ceci était la petite biographie du plan grand et majetueux noveliste que le monde n'avait jamais connu auparavant</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of about -->
+
+    <!-- footer -->
+    <footer>
+      <div class = "social-links">
+        <a href = "#"><i class = "fab fa-facebook-f"></i></a>
+        <a href = "#"><i class = "fab fa-twitter"></i></a>
+        <a href = "#"><i class = "fab fa-instagram"></i></a>
+        <a href = "#"><i class = "fab fa-pinterest"></i></a>
+      </div>
+      <span>Libraire.Dostoïevski page</span>
+	  <span>"Licence : Informatique Appliquée"</a><br> <br>
+|Website created & designed BY Mouna Gualy|</span>
+    </footer>
+    <!-- end of footer -->
+	<script>
+		console.log('test');
+		console.log(document.getElementById("moha1"));
+		document.getElementById("moha1").addEventListener("click",function(e){
+		e.preventDefault();
+			var bookname=document.getElementById("moha").value;
+			var urls = [
+			'https://www.operatoday.com/documents/The_Gambler.pdf',
+			'https://beq.ebooksgratuits.com/vents/Dostoievski-crime-1.pdf',
+			'https://beq.ebooksgratuits.com/vents/Dostoievski-Karamazov-1.pdf',
+			'http://www.planetpublish.com/wp-content/uploads/2011/11/Notes_from_the_Underground_NT.pdf',
+			'https://www.holybooks.com/wp-content/uploads/The-Double.pdf',
+			'https://beq.ebooksgratuits.com/vents/Dostoievski-possedes-1.pdf',
+			'https://almabooks.com/wp-content/uploads/2018/02/9780714545776.pdf',
+			'https://www.stephenhicks.org/wp-content/uploads/2016/11/DostoevskyF-Grand-Inquisitor-text.pdf',
+			'https://www.holybooks.com/wp-content/uploads/Gentle-Spirit.pdf',
+			'https://www.holybooks.com/wp-content/uploads/The-House-of-the-Dead.pdf',
+			'https://gustavus.edu/threecrowns/files/The%20Dream%20of%20a%20Ridiculous%20Man,%20Fyodor%20Dostoevsky.pdf',
+			'https://d-pdf.com/book/4129/read',
+			'file:///C://Users/walid/Documents/book_urls/The-Dream-of-a-Ridiculous-Man.pdf',
+			'https://www.holybooks.com/wp-content/uploads/Another-Mans-Wife.pdf',
+			'https://www.holybooks.com/wp-content/uploads/The-Eternal-Husband.pdf',
+			'https://almabooks.com/wp-content/uploads/2020/11/Uncles-Dream-Extract.pdf',
+			'https://www.holybooks.com/wp-content/uploads/A-Christmas-Tree-and-a-Wedding.pdf',
+			'https://www.holybooks.com/wp-content/uploads/The-Peasant-Marey.pdf',
+			'https://www.holybooks.com/wp-content/uploads/Polzunkov.pdf',
+			];
+			var bookname_simplified = bookname.toLowerCase().replace(/ /g,'-');
+			for (let i = 0; i < urls.length; i++) {
+			  if (urls[i].toLowerCase().replace(/_/g, '-').includes(bookname_simplified)){
+				console.log(urls[i]);
+				window.open(urls[i], '_blank').focus();
+				break;
+			  }
+			}
+			
+		})
+	</script>
+  </body>
+</html>
